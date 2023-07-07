@@ -2,6 +2,8 @@ This is an example documentation website built with [Next.js](https://nextjs.org
 
 ## Getting Started
 
+[![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-blue?style=flat-square&logo=codesandbox)](https://githubbox.com/SonMooSans/next-docs-template)
+
 First, run the development server:
 
 ```bash
