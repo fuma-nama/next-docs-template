@@ -14,7 +14,7 @@ const SearchDialog = dynamic(() => import("./dialog/search"));
 export function SidebarProvider({ children }: { children: ReactNode }) {
     return (
         <Base.SidebarProvider>
-            <Base.SidebarTrigger className="sticky flex flex-row w-full top-12 gap-2 h-12 text-sm bg-background border-b-[1px] px-8 items-center z-50 sm:px-14 lg:hidden">
+            <Base.SidebarTrigger className="sticky flex flex-row w-full top-12 gap-2 h-12 text-sm bg-background border-b-[1px] px-8 items-center z-50 lg:hidden">
                 <MenuIcon className="w-4 h-4" />
                 Menu
             </Base.SidebarTrigger>
