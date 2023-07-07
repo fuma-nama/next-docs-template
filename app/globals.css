@@ -2,26 +2,125 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 0 0% 3.9%;
+
+        --muted: 0 0% 96.1%;
+        --muted-foreground: 0 0% 45.1%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 3.9%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 3.9%;
+
+        --border: 0 0% 89.8%;
+        --input: 0 0% 89.8%;
+
+        --primary: 0 0% 9%;
+        --primary-foreground: 0 0% 98%;
+
+        --secondary: 0 0% 96.1%;
+        --secondary-foreground: 0 0% 9%;
+
+        --accent: 0 0% 96.1%;
+        --accent-foreground: 0 0% 9%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+
+        --ring: 0 0% 63.9%;
+
+        --radius: 0.5rem;
+    }
+
+    .dark {
+        --background: 0 0% 3.9%;
+        --foreground: 0 0% 98%;
+
+        --muted: 0 0% 14.9%;
+        --muted-foreground: 0 0% 63.9%;
+
+        --popover: 0 0% 3.9%;
+        --popover-foreground: 0 0% 98%;
+
+        --card: 0 0% 3.9%;
+        --card-foreground: 0 0% 98%;
+
+        --border: 0 0% 14.9%;
+        --input: 0 0% 14.9%;
+
+        --primary: 0 0% 98%;
+        --primary-foreground: 0 0% 9%;
+
+        --secondary: 0 0% 14.9%;
+        --secondary-foreground: 0 0% 98%;
+
+        --accent: 0 0% 14.9%;
+        --accent-foreground: 0 0% 98%;
+
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 85.7% 97.3%;
+
+        --ring: 0 0% 14.9%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+/* code block colors */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+    --shiki-color-text: oklch(86.07% 0 0);
+    --shiki-token-constant: oklch(76.85% 0.121 252.34);
+    --shiki-token-string: oklch(81.11% 0.124 55.08);
+    --shiki-token-comment: oklch(55.18% 0.017 251.27);
+    --shiki-token-keyword: oklch(72.14% 0.162 15.49);
+    /*--shiki-token-parameter: #ff9800; is same as in light mode */
+    --shiki-token-function: oklch(72.67% 0.137 299.15);
+    --shiki-token-string-expression: oklch(69.28% 0.179 143.2);
+    --shiki-token-punctuation: oklch(79.21% 0 0);
+    --shiki-token-link: var(--shiki-token-string);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    /* from github-dark */
+    --shiki-color-ansi-black: #586069;
+    --shiki-color-ansi-black-dim: #58606980;
+    --shiki-color-ansi-red: #ea4a5a;
+    --shiki-color-ansi-red-dim: #ea4a5a80;
+    --shiki-color-ansi-green: #34d058;
+    --shiki-color-ansi-green-dim: #34d05880;
+    --shiki-color-ansi-yellow: #ffea7f;
+    --shiki-color-ansi-yellow-dim: #ffea7f80;
+    --shiki-color-ansi-blue: #2188ff;
+    --shiki-color-ansi-blue-dim: #2188ff80;
+    --shiki-color-ansi-magenta: #b392f0;
+    --shiki-color-ansi-magenta-dim: #b392f080;
+    --shiki-color-ansi-cyan: #39c5cf;
+    --shiki-color-ansi-cyan-dim: #39c5cf80;
+    --shiki-color-ansi-white: #d1d5da;
+    --shiki-color-ansi-white-dim: #d1d5da80;
+    --shiki-color-ansi-bright-black: #959da5;
+    --shiki-color-ansi-bright-black-dim: #959da580;
+    --shiki-color-ansi-bright-red: #f97583;
+    --shiki-color-ansi-bright-red-dim: #f9758380;
+    --shiki-color-ansi-bright-green: #85e89d;
+    --shiki-color-ansi-bright-green-dim: #85e89d80;
+    --shiki-color-ansi-bright-yellow: #ffea7f;
+    --shiki-color-ansi-bright-yellow-dim: #ffea7f80;
+    --shiki-color-ansi-bright-blue: #79b8ff;
+    --shiki-color-ansi-bright-blue-dim: #79b8ff80;
+    --shiki-color-ansi-bright-magenta: #b392f0;
+    --shiki-color-ansi-bright-magenta-dim: #b392f080;
+    --shiki-color-ansi-bright-cyan: #56d4dd;
+    --shiki-color-ansi-bright-cyan-dim: #56d4dd80;
+    --shiki-color-ansi-bright-white: #fafbfc;
+    --shiki-color-ansi-bright-white-dim: #fafbfc80;
 }
